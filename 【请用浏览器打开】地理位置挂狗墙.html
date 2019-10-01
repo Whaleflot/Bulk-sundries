@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <title>地理位置挂狗墙</title>
+    <style>
+        html,
+        body,
+        #container {
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<!-- 加载地图JSAPI脚本 -->
+<div class="info">欢迎来到地理位置挂狗墙！<br>这里有部分被我查地址的人的位置，他们因为诈骗/倒卖技术/威胁等原因被挂出<br>我暂时只公布他们的位置而不对应QQ号，如果他们屡教不改，我会对应QQ号挂起<br><br>那个最大的红色的，是一个辱华狗的位置<br>那位辱华狗的信息是：<br>QQ：1124796703（已封号）<br>QQ大号：2585288529<br>住址：浙江省杭州市滨江区春波南苑47幢1单元401室<br>姓名：赵煜涵<br>手机号:13003661690<br><br><strong>查地址请找QQ：82539998(一只虎鲸呀)<br>要有合理证据</strong><br><br>地图可随意放大缩小<br>地图由高德地图提供技术支持</div>
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=4cda2367dcd33dd8f280fe4b6e0f19cc"></script>
+<script>
+    var map = new AMap.Map('container', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        mapStyle: 'amap://styles/macaron',
+        zoom:4, //初始化地图层级
+        center: [116.397428, 39.90923] //初始化地图中心点
+    });
+    var markerxiaoyanhe = new AMap.Marker({
+        position: new AMap.LngLat(118.128375,27.337213),
+        offset: new AMap.Pixel(-13,-30)
+    });
+    var markeronijiang = new AMap.Marker({
+        position: new AMap.LngLat(107.25908,33.266643),
+        offset: new AMap.Pixel(-13,-30)
+    });
+    var markerqie = new AMap.Marker({
+        position: new AMap.LngLat(122.499547,40.647828),
+        offset: new AMap.Pixel(-13,-30)
+    });
+    var markerwuyan = new AMap.Marker({
+        position: new AMap.LngLat(122.399259,36.939028),
+        offset: new AMap.Pixel(-13,-30)
+    });
+    var markerxuanwuhu = new AMap.Marker({
+        position: new AMap.LngLat(115.735659,24.146107),
+        offset: new AMap.Pixel(-13,-30)
+    });
+    var markerruhuagou = new AMap.Marker({
+        position: new AMap.LngLat(120.211694,30.187646),
+        offset: new AMap.Pixel(-20.5,-70),
+        icon: 'http://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png'
+    });
+    map.add(markerruhuagou);
+    map.add(markerxuanwuhu);
+    map.add(markerwuyan);
+    map.add(markerqie);
+    map.add(markerxiaoyanhe);
+    map.add(markeronijiang);
+</script>
+</body>
+</html>
